@@ -1,0 +1,51 @@
+.scrollText {
+  animation: scroll 20s linear infinite;
+  white-space: nowrap;
+  position: absolute;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.image{
+    position: relative;
+}
+.loop{
+    position: absolute;
+    top: -50px;
+    left: -10px;
+    z-index: 1;
+    position: absolute;
+    color: transparent;
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.mia{
+    z-index: 10;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.text {
+  text-align: left;
+}
