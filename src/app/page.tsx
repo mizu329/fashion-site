@@ -1,50 +1,13 @@
+
+import { Footer } from "@/components/footer";
+import { Hero } from "@/components/hero";
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#F0F0F0] font-['Zen_Kaku_Gothic_New',system-ui,sans-serif] text-[#242120]">
       <main className="mx-auto flex min-h-screen max-w-5xl flex-col bg-[#EDE7C6]">
-        {/* ======================= ヘッダー ======================= */}
-        <header className="flex items-center justify-between px-10 py-6 text-sm text-[#433E3D]">
-          <div className="flex items-center gap-8">
-            <span className="tracking-[0.3em]">MENU</span>
-            <nav className="hidden gap-8 md:flex">
-              <a href="#about" className="tracking-[0.25em]">
-                ABOUT
-              </a>
-              <a href="#concept" className="tracking-[0.25em]">
-                CONCEPT
-              </a>
-              <a href="#items" className="tracking-[0.25em]">
-                ITEMS
-              </a>
-            </nav>
-          </div>
-          <button className="rounded-full px-6 py-2 text-xs tracking-[0.25em]">
-            ONLINE SHOP
-          </button>
-        </header>
-
-        {/* ======================= ファーストビュー ======================= */}
-        <section className="relative flex flex-1 flex-col gap-10 overflow-hidden px-10 pb-24 pt-6">
-          {/* 中央：大きなロゴタイポ */}
-          <div className="mt-10 text-center md:mt-16">
-            <p className="text-[2.8rem] leading-[1.2] text-[#FFFFFF] md:text-[3.6rem]">
-              Lorem Ipsum Lorem Ipsum
-            </p>
-          </div>
-
-          {/* 3 枚のメインビジュアル（擬似画像） */}
-          <div className="mt-10 grid grid-cols-3 gap-6">
-            <div className="aspect-4/5 rounded-3xl bg-gradient-to-b from-[#acd0f4] to-[#7b9fcc]" />
-            <div className="aspect-[4/5] rounded-3xl bg-gradient-to-b from-[#f4d6e2] to-[#e6a9c4]" />
-            <div className="aspect-[4/5] rounded-3xl bg-gradient-to-b from-[#d7f0da] to-[#9fd7ab]" />
-          </div>
-
-          {/* 下部テキスト（Figmaの段落テキスト） */}
-          <div className="mt-10 flex flex-col gap-4 text-xs leading-relaxed text-[#433E3D] md:flex-row md:justify-center md:text-sm">
-            <p className="max-w-md text-center">consectetur adipisicing elit</p>
-          </div>
-        </section>
-
+        
+<Hero />
         {/* ======================= 青色セクション ======================= */}
         <section className="relative bg-[#ACD0F4] px-10 py-20">
           <div className="relative mx-auto max-w-5xl">
@@ -234,65 +197,7 @@ export default function Home() {
         </section>
 
 
-        {/* ======================= ギャラリー＋フッター ======================= */}
-        <footer className="bg-[#242120] px-10 pb-10 pt-16 text-[#F7F7F7]">
-          {/* ギャラリー（5枚） */}
-          <div className="overflow-hidden">
-            <div className="flex gap-4 animate-scroll">
-              {/* 1セット目 */}
-              <div className="flex-none w-48 aspect-3/4 rounded-2xl border border-white/50 bg-gradient-to-b from-white/40 to-white/5 cursor-pointer hover:opacity-80 transition-opacity" />
-              <div className="flex-none w-48 aspect-3/4 rounded-2xl border border-white/50 bg-gradient-to-b from-white/40 to-white/5 cursor-pointer hover:opacity-80 transition-opacity" />
-              <div className="flex-none w-48 aspect-3/4 rounded-2xl border border-white/50 bg-gradient-to-b from-white/40 to-white/5 cursor-pointer hover:opacity-80 transition-opacity" />
-              <div className="flex-none w-48 aspect-3/4 rounded-2xl border border-white/50 bg-gradient-to-b from-white/40 to-white/5 cursor-pointer hover:opacity-80 transition-opacity" />
-              <div className="flex-none w-48 aspect-3/4 rounded-2xl border border-white/50 bg-gradient-to-b from-white/40 to-white/5 cursor-pointer hover:opacity-80 transition-opacity" />
-              {/* 2セット目（無限ループ用） */}
-              <div className="flex-none w-48 aspect-3/4 rounded-2xl border border-white/50 bg-gradient-to-b from-white/40 to-white/5 cursor-pointer hover:opacity-80 transition-opacity" />
-              <div className="flex-none w-48 aspect-3/4 rounded-2xl border border-white/50 bg-gradient-to-b from-white/40 to-white/5 cursor-pointer hover:opacity-80 transition-opacity" />
-              <div className="flex-none w-48 aspect-3/4 rounded-2xl border border-white/50 bg-gradient-to-b from-white/40 to-white/5 cursor-pointer hover:opacity-80 transition-opacity" />
-              <div className="flex-none w-48 aspect-3/4 rounded-2xl border border-white/50 bg-gradient-to-b from-white/40 to-white/5 cursor-pointer hover:opacity-80 transition-opacity" />
-              <div className="flex-none w-48 aspect-3/4 rounded-2xl border border-white/50 bg-gradient-to-b from-white/40 to-white/5 cursor-pointer hover:opacity-80 transition-opacity" />
-            </div>
-          </div>
-
-          {/* FOLLOW US & CONTACT */}
-          <div className="mt-16 flex flex-col gap-10 md:flex-row md:items-end md:justify-between">
-            {/* FOLLOW US */}
-            <div>
-              <p className="text-xs tracking-[0.35em]">FOLLOW US</p>
-              <div className="mt-4 flex items-center gap-3">
-                {["in", "ig", "fb"].map((label) => (
-                  <span
-                    key={label}
-                    className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#F7F7F7] text-[0.7rem] text-[#2B2B2B]"
-                  >
-                    {label}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* CONTACT ブロック */}
-            <div className="w-full max-w-md">
-              <p className="text-[2.6rem] leading-[1.1]">Lorem ipsum</p>
-              <p className="text-[2.6rem] leading-[1.1]">
-                dolor sit
-                <br />
-                amet
-              </p>
-              <div className="mt-6">
-                <div className="flex items-center justify-between border-b border-[#F7F7F7]/70 pb-2 text-sm">
-                  <span>CONTACT</span>
-                  <span className="text-xs">→</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* コピーライト */}
-          <div className="mt-10 flex items-center justify-between text-[0.7rem] text-[#F7F7F7]/70">
-            <span>©webdesign pro</span>
-          </div>
-        </footer>
+<Footer />
       </main>
     </div>
   );
