@@ -1,6 +1,7 @@
 
 import { Footer } from "@/components/footer";
 import { Hero } from "@/components/hero";
+import { AboutConcept } from "@/components/about-concept";
 
 export default function Home() {
   return (
@@ -8,65 +9,7 @@ export default function Home() {
       <main className="mx-auto flex min-h-screen max-w-5xl flex-col bg-[#EDE7C6]">
         
 <Hero />
-        {/* ======================= 青色セクション ======================= */}
-        <section className="relative bg-[#ACD0F4] px-10 py-20">
-          <div className="relative mx-auto max-w-5xl">
-            {/* 左側の大きなテキスト */}
-            <div className="mb-10">
-              <p className="text-[5.6rem] leading-[1] font-light text-white">
-                Lorem
-                <br />
-                Ipsum
-              </p>
-            </div>
-
-            {/* 中央の大きな円形画像エリア */}
-            <div className="relative flex items-center justify-center py-20">
-              {/* 背景の円形装飾 */}
-              <div className="absolute left-0 top-0 h-[640px] w-[640px] rounded-full bg-white/40 opacity-40" />
-
-              {/* メインの円形画像（擬似） */}
-              <div className="relative z-10 h-[650px] w-[650px] rounded-full bg-gradient-to-br from-white/60 to-white/20 shadow-2xl" />
-
-              {/* 右側のテキスト */}
-              <div className="absolute right-0 top-1/2 -translate-y-1/2">
-                <p className="text-[5.6rem] leading-none font-light text-white">
-                  Lorem
-                  <br />
-                  Ipsum
-                </p>
-              </div>
-            </div>
-
-            {/* 下部の画像とテキスト */}
-            <div className="mt-10 grid gap-8 md:grid-cols-2">
-              {/* 左：画像エリア */}
-              <div className="relative">
-                <div className="aspect-[683/597] rounded-3xl bg-gradient-to-br from-white/50 to-white/20 shadow-lg" />
-              </div>
-
-              {/* 右：テキストエリア */}
-              <div className="flex flex-col justify-center space-y-6 text-white">
-                <p className="text-xs tracking-[0.35em] opacity-80">CONCEPT</p>
-                <p className="text-[2.4rem] leading-[1.1]">
-                  dolore eu
-                  <br />
-                  fugiat nulla
-                </p>
-                <p className="text-sm leading-relaxed opacity-90">
-                  山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。
-                  意地を通せば窮屈だ。とかくに人の世は住みにくい。住みにくさが高じると、
-                  安い所へ引き越したくなる。
-                </p>
-              </div>
-            </div>
-
-            {/* 矢印アイコン（右下） */}
-            <div className="mt-10 flex justify-end">
-              <div className="h-8 w-48 rounded-full bg-white/20" />
-            </div>
-          </div>
-        </section>
+        <AboutConcept />
 
         {/* ======================= ABOUT / CONCEPT セクション ======================= */}
         <section
