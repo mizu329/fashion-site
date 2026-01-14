@@ -2,6 +2,7 @@
 import { Footer } from "@/components/footer";
 import { Hero } from "@/components/hero";
 import { AboutConcept } from "@/components/about-concept";
+import { Items } from "@/components/items";
 
 export default function Home() {
   return (
@@ -11,78 +12,8 @@ export default function Home() {
 <Hero />
         <AboutConcept />
 
-        {/* ======================= ABOUT / CONCEPT セクション ======================= */}
-        <section
-          id="about"
-          className="relative bg-[#F0F0F0] px-10 pb-24 pt-20 text-[#242120]"
-        >
-          <div className="grid gap-12">
-            {/* 左カラム：ABOUT */}
-            <div className="text-center">
-              <p className="mt-6 text-[3.4rem] leading-[1.1] text-[#242120]">
-                Lorem Ipsum
-              </p>
-              <p className="mt-4 text-[2.1rem] leading-[1.35] text-[#242120]">
-                consectetur adipisicing
-              </p>
-            </div>
-          </div>
-        </section>
+       <Items />
 
-        {/* ======================= ITEMS セクション ======================= */}
-        <section
-          id="items"
-          className="bg-[#F0F0F0] px-10 pb-24 pt-20 text-[#242120]"
-        >
-          <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-end">
-            <div className="text-right">
-              <p className="font-['Zen_Kaku_Gothic_New'] text-[90px] font-normal leading-[68px] tracking-normal text-[#433E3D]">Lorem</p>
-              <p className="font-['Zen_Kaku_Gothic_New'] text-[90px] font-normal leading-[68px] tracking-normal text-[#242120]">
-                Ipsum
-              </p>
-            </div>
-          </div>
-
-          {/* カード 4 枚 */}
-          <div className="mt-12 grid gap-10 md:grid-cols-2">
-            {[
-              {
-                title: "laboris nisi ut aliquip",
-                label: "nulla pariatur",
-                tone: "from-[#c9d8f2] to-[#7b9fcc]",
-              },
-              {
-                title: "Lorem Ipsum",
-                label: "nulla pariatur",
-                tone: "from-[#f4d6e2] to-[#e6a9c4]",
-              },
-              {
-                title: "reprehenderit in voluptate",
-                label: "Ut enim ad minim veniam",
-                tone: "from-[#d7f0da] to-[#9fd7ab]",
-              },
-              {
-                title: "laboris nisi ut aliquip",
-                label: "nulla pariatur",
-                tone: "from-[#f0d8c4] to-[#d4a574]",
-              },
-            ].map((item) => (
-              <article key={item.title} className="flex flex-col gap-4">
-                <div
-                  className={`aspect-4/5 rounded-[2.25rem] bg-gradient-to-b ${item.tone}`}
-                />
-                <div className="space-y-1 text-xs">
-                  <p className="inline-block rounded-full bg-[#242120] px-3 py-1 text-[0.7rem] tracking-[0.2em] text-white">
-                    {item.label}
-                  </p>
-                  <p className="mt-1 text-[0.75rem] tracking-[0.2em] text-[#242120]">
-                    {item.title}
-                  </p>
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
 
         {/* ======================= TOPICS セクション ======================= */}
         <section className="bg-[#F0F0F0] px-10 pb-24 pt-20">

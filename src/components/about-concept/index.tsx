@@ -1,6 +1,7 @@
 export function AboutConcept() {
     return (
         <>
+         {/* ======================= ABOUT / CONCEPT セクション ======================= */}
         {/* ======================= 青色セクション ======================= */}
         <section className="relative bg-[#ACD0F4] px-10 py-20">
           <div className="relative mx-auto max-w-5xl">
