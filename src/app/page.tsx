@@ -18,35 +18,13 @@ export default function Home() {
               </a>
             </nav>
           </div>
-          <button className="rounded-full border border-[#433E3D]/40 px-6 py-2 text-xs tracking-[0.25em]">
+          <button className="rounded-full px-6 py-2 text-xs tracking-[0.25em]">
             ONLINE SHOP
           </button>
         </header>
 
         {/* ======================= ファーストビュー ======================= */}
         <section className="relative flex flex-1 flex-col gap-10 overflow-hidden px-10 pb-24 pt-6">
-          {/* 上部：左のCONCEPT・右の大きなタイポ */}
-          <div className="mt-10 flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
-            {/* 左：CONCEPTテキスト */}
-            <div className="max-w-xs">
-              <p className="text-xs tracking-[0.35em] text-[#433E3D]">
-                CONCEPT
-              </p>
-              <p className="mt-3 text-[1.1rem] leading-[2.7] text-[#433E3D]">
-                consectetur adipisicing elit
-              </p>
-            </div>
-
-            {/* 右：大きなピンク文字 */}
-            <div className="text-right md:text-left">
-              <p className="text-[3.2rem] leading-[1.1] text-[#F4D6E2] md:text-[4.2rem]">
-                dolore eu
-                <br />
-                fugiat nulla
-              </p>
-            </div>
-          </div>
-
           {/* 中央：大きなロゴタイポ */}
           <div className="mt-10 text-center md:mt-16">
             <p className="text-[2.8rem] leading-[1.2] text-[#FFFFFF] md:text-[3.6rem]">
@@ -56,18 +34,74 @@ export default function Home() {
 
           {/* 3 枚のメインビジュアル（擬似画像） */}
           <div className="mt-10 grid grid-cols-3 gap-6">
-            <div className="aspect-[4/5] rounded-3xl bg-gradient-to-b from-[#acd0f4] to-[#7b9fcc]" />
+            <div className="aspect-4/5 rounded-3xl bg-gradient-to-b from-[#acd0f4] to-[#7b9fcc]" />
             <div className="aspect-[4/5] rounded-3xl bg-gradient-to-b from-[#f4d6e2] to-[#e6a9c4]" />
             <div className="aspect-[4/5] rounded-3xl bg-gradient-to-b from-[#d7f0da] to-[#9fd7ab]" />
           </div>
 
           {/* 下部テキスト（Figmaの段落テキスト） */}
-          <div className="mt-10 flex flex-col gap-4 text-xs leading-relaxed text-[#433E3D] md:flex-row md:justify-end md:text-sm">
-            <p className="max-w-md">
-              山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。
-              意地を通せば窮屈だ。とかくに人の世は住みにくい。住みにくさが高じると、
-              安い所へ引き越したくなる。
-            </p>
+          <div className="mt-10 flex flex-col gap-4 text-xs leading-relaxed text-[#433E3D] md:flex-row md:justify-center md:text-sm">
+            <p className="max-w-md text-center">consectetur adipisicing elit</p>
+          </div>
+        </section>
+
+        {/* ======================= 青色セクション ======================= */}
+        <section className="relative bg-[#ACD0F4] px-10 py-20">
+          <div className="relative mx-auto max-w-5xl">
+            {/* 左側の大きなテキスト */}
+            <div className="mb-10">
+              <p className="text-[5.6rem] leading-[1] font-light text-white">
+                Lorem
+                <br />
+                Ipsum
+              </p>
+            </div>
+
+            {/* 中央の大きな円形画像エリア */}
+            <div className="relative flex items-center justify-center py-20">
+              {/* 背景の円形装飾 */}
+              <div className="absolute left-0 top-0 h-[640px] w-[640px] rounded-full bg-white/40 opacity-40" />
+
+              {/* メインの円形画像（擬似） */}
+              <div className="relative z-10 h-[650px] w-[650px] rounded-full bg-gradient-to-br from-white/60 to-white/20 shadow-2xl" />
+
+              {/* 右側のテキスト */}
+              <div className="absolute right-0 top-1/2 -translate-y-1/2">
+                <p className="text-[5.6rem] leading-none font-light text-white">
+                  Lorem
+                  <br />
+                  Ipsum
+                </p>
+              </div>
+            </div>
+
+            {/* 下部の画像とテキスト */}
+            <div className="mt-10 grid gap-8 md:grid-cols-2">
+              {/* 左：画像エリア */}
+              <div className="relative">
+                <div className="aspect-[683/597] rounded-3xl bg-gradient-to-br from-white/50 to-white/20 shadow-lg" />
+              </div>
+
+              {/* 右：テキストエリア */}
+              <div className="flex flex-col justify-center space-y-6 text-white">
+                <p className="text-xs tracking-[0.35em] opacity-80">CONCEPT</p>
+                <p className="text-[2.4rem] leading-[1.1]">
+                  dolore eu
+                  <br />
+                  fugiat nulla
+                </p>
+                <p className="text-sm leading-relaxed opacity-90">
+                  山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。
+                  意地を通せば窮屈だ。とかくに人の世は住みにくい。住みにくさが高じると、
+                  安い所へ引き越したくなる。
+                </p>
+              </div>
+            </div>
+
+            {/* 矢印アイコン（右下） */}
+            <div className="mt-10 flex justify-end">
+              <div className="h-8 w-48 rounded-full bg-white/20" />
+            </div>
           </div>
         </section>
 
@@ -76,41 +110,15 @@ export default function Home() {
           id="about"
           className="relative bg-[#F0F0F0] px-10 pb-24 pt-20 text-[#242120]"
         >
-          <div className="grid gap-12 md:grid-cols-[minmax(0,2.2fr)_minmax(0,3fr)]">
+          <div className="grid gap-12">
             {/* 左カラム：ABOUT */}
-            <div>
-              <p className="text-xs tracking-[0.35em] text-[#433E3D]">ABOUT</p>
+            <div className="text-center">
               <p className="mt-6 text-[3.4rem] leading-[1.1] text-[#242120]">
                 Lorem Ipsum
               </p>
               <p className="mt-4 text-[2.1rem] leading-[1.35] text-[#242120]">
                 consectetur adipisicing
               </p>
-              <p className="mt-8 text-xs leading-relaxed text-[#433E3D] md:text-sm">
-                山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。
-                意地を通せば窮屈だ。とかくに人の世は住みにくい。住みにくさが高じると、
-                安い所へ引き越したくなる。
-              </p>
-            </div>
-
-            {/* 右カラム：円＋テキストカード（CONCEPT） */}
-            <div className="relative">
-              <div className="absolute left-20 top-0 h-52 w-52 -translate-y-10 rounded-full bg-[#F4D6E2]" />
-              <div className="relative mt-12 rounded-3xl bg-white/80 p-10 shadow-sm backdrop-blur">
-                <p className="text-xs tracking-[0.35em] text-[#433E3D]">
-                  CONCEPT
-                </p>
-                <p className="mt-6 text-[2.4rem] leading-[1.1] text-[#242120]">
-                  dolore eu
-                  <br />
-                  fugiat nulla
-                </p>
-                <p className="mt-8 text-xs leading-relaxed text-[#433E3D] md:text-sm">
-                  山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。
-                  意地を通せば窮屈だ。とかくに人の世は住みにくい。住みにくさが高じると、
-                  安い所へ引き越したくなる。
-                </p>
-              </div>
             </div>
           </div>
         </section>
@@ -118,23 +126,19 @@ export default function Home() {
         {/* ======================= ITEMS セクション ======================= */}
         <section
           id="items"
-          className="bg-[#F4F4F4] px-10 pb-24 pt-20 text-[#242120]"
+          className="bg-[#F0F0F0] px-10 pb-24 pt-20 text-[#242120]"
         >
-          <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-            <div>
-              <p className="text-xs tracking-[0.35em] text-[#433E3D]">ITEMS</p>
-              <p className="mt-6 text-[2.3rem] leading-[1.2] text-[#242120]">
-                Ut enim ad minim veniam
+          <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-end">
+            <div className="text-right">
+              <p className="font-['Zen_Kaku_Gothic_New'] text-[90px] font-normal leading-[68px] tracking-normal text-[#433E3D]">Lorem</p>
+              <p className="font-['Zen_Kaku_Gothic_New'] text-[90px] font-normal leading-[68px] tracking-normal text-[#242120]">
+                Ipsum
               </p>
             </div>
-            <p className="max-w-md text-xs leading-relaxed text-[#433E3D] md:text-sm">
-              山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。
-              意地を通せば窮屈だ。とかくに人の世は住みにくい。
-          </p>
-        </div>
+          </div>
 
-          {/* カード 3 枚 */}
-          <div className="mt-12 grid gap-10 md:grid-cols-3">
+          {/* カード 4 枚 */}
+          <div className="mt-12 grid gap-10 md:grid-cols-2">
             {[
               {
                 title: "laboris nisi ut aliquip",
@@ -151,10 +155,15 @@ export default function Home() {
                 label: "Ut enim ad minim veniam",
                 tone: "from-[#d7f0da] to-[#9fd7ab]",
               },
+              {
+                title: "laboris nisi ut aliquip",
+                label: "nulla pariatur",
+                tone: "from-[#f0d8c4] to-[#d4a574]",
+              },
             ].map((item) => (
               <article key={item.title} className="flex flex-col gap-4">
                 <div
-                  className={`aspect-[4/5] rounded-[2.25rem] bg-gradient-to-b ${item.tone}`}
+                  className={`aspect-4/5 rounded-[2.25rem] bg-gradient-to-b ${item.tone}`}
                 />
                 <div className="space-y-1 text-xs">
                   <p className="inline-block rounded-full bg-[#242120] px-3 py-1 text-[0.7rem] tracking-[0.2em] text-white">
@@ -173,11 +182,12 @@ export default function Home() {
         <section className="bg-[#F0F0F0] px-10 pb-24 pt-20">
           <div className="mx-auto max-w-4xl rounded-[2.5rem] border border-[#242120] bg-[#F4F3EF] px-10 py-12">
             {/* 見出し */}
-            <div className="relative mb-10 inline-flex items-center gap-6">
-              <div className="h-14 w-64 rounded-full bg-[#F4F4F4]" />
-              <p className="text-lg tracking-[0.25em] text-[#242120]">
-                TOPICS
-              </p>
+            <div className="relative mb-10 flex justify-center">
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="h-14 w-fit rounded-full bg-[#F4F4F4] flex items-center justify-center px-3">
+                  <p className="text-lg tracking-[0.25em] text-[#242120]">TOPICS</p>
+                </div>
+              </div>
             </div>
 
             {/* 3つの丸い画像＋キャプション */}
@@ -187,50 +197,61 @@ export default function Home() {
                 <p className="text-center text-xs font-medium text-[#242120]">
                   consectetur adipisicing
                 </p>
+                <div className="mt-2 space-y-1 text-xs leading-relaxed text-[#433E3D] md:text-sm">
+                  <p>山路を登りながら、こう考えた。智に働けば角が立つ。</p>
+                </div>
               </div>
               <div className="space-y-4">
                 <div className="mx-auto aspect-[3/4] w-40 rounded-full bg-gradient-to-b from-[#f4d6e2] to-[#e6a9c4]" />
                 <p className="text-center text-xs font-medium text-[#242120]">
-                  consectetur
+                  Lorem Ipsum
                 </p>
+                <div className="mt-2 space-y-1 text-xs leading-relaxed text-[#433E3D] md:text-sm">
+                  <p>山路を登りながら、こう考えた。</p>
+                </div>
               </div>
               <div className="space-y-4">
                 <div className="mx-auto aspect-[3/4] w-40 rounded-full bg-gradient-to-b from-[#d7f0da] to-[#9fd7ab]" />
                 <p className="text-center text-xs font-medium text-[#242120]">
-                  commodo consequat
+                  velit esse
                 </p>
+                <div className="mt-2 space-y-1 text-xs leading-relaxed text-[#433E3D] md:text-sm">
+                  <p>山路を登りながら、こう考えた。智に働けば角が立つ。</p>
+                </div>
               </div>
             </div>
 
-            {/* 下部のテキスト 3 行 */}
-            <div className="mt-10 space-y-2 text-xs leading-relaxed text-[#433E3D] md:text-sm">
-              <p>山路を登りながら、こう考えた。智に働けば角が立つ。</p>
-              <p>山路を登りながら、こう考えた。</p>
-              <p>山路を登りながら、こう考えた。智に働けば角が立つ。</p>
+            {/* 一覧に行くボタン */}
+            <div className="mt-10 flex justify-center">
+              <button className="rounded-full bg-[#242120] px-6 py-3 text-sm tracking-[0.25em] text-[#F4F3EF] transition-colors hover:bg-[#433E3D] flex items-center gap-2">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+                一覧に行く
+              </button>
             </div>
           </div>
         </section>
 
-        {/* ======================= 横スクロール風テキスト ======================= */}
-        <section className="bg-[#F4F4F4] px-10 py-10">
-          <div className="overflow-x-auto">
-            <div className="inline-flex min-w-full items-center gap-24 whitespace-nowrap py-4 text-[2.4rem] font-light text-[#433E3D] md:text-[3rem]">
-              <span>Lorem Ipsum Lorem Ipsum</span>
-              <span>Lorem Ipsum Lorem Ipsum</span>
-              <span>Lorem Ipsum Lorem Ipsum</span>
-            </div>
-          </div>
-        </section>
 
         {/* ======================= ギャラリー＋フッター ======================= */}
         <footer className="bg-[#242120] px-10 pb-10 pt-16 text-[#F7F7F7]">
           {/* ギャラリー（5枚） */}
-          <div className="grid gap-4 md:grid-cols-5">
-            <div className="aspect-[3/4] rounded-2xl border border-white/50 bg-gradient-to-b from-white/40 to-white/5" />
-            <div className="aspect-[3/4] rounded-2xl border border-white/50 bg-gradient-to-b from-white/40 to-white/5" />
-            <div className="aspect-[3/4] rounded-2xl border border-white/50 bg-gradient-to-b from-white/40 to-white/5" />
-            <div className="aspect-[3/4] rounded-2xl border border-white/50 bg-gradient-to-b from-white/40 to-white/5" />
-            <div className="aspect-[3/4] rounded-2xl border border-white/50 bg-gradient-to-b from-white/40 to-white/5" />
+          <div className="overflow-hidden">
+            <div className="flex gap-4 animate-scroll">
+              {/* 1セット目 */}
+              <div className="flex-none w-48 aspect-3/4 rounded-2xl border border-white/50 bg-gradient-to-b from-white/40 to-white/5 cursor-pointer hover:opacity-80 transition-opacity" />
+              <div className="flex-none w-48 aspect-3/4 rounded-2xl border border-white/50 bg-gradient-to-b from-white/40 to-white/5 cursor-pointer hover:opacity-80 transition-opacity" />
+              <div className="flex-none w-48 aspect-3/4 rounded-2xl border border-white/50 bg-gradient-to-b from-white/40 to-white/5 cursor-pointer hover:opacity-80 transition-opacity" />
+              <div className="flex-none w-48 aspect-3/4 rounded-2xl border border-white/50 bg-gradient-to-b from-white/40 to-white/5 cursor-pointer hover:opacity-80 transition-opacity" />
+              <div className="flex-none w-48 aspect-3/4 rounded-2xl border border-white/50 bg-gradient-to-b from-white/40 to-white/5 cursor-pointer hover:opacity-80 transition-opacity" />
+              {/* 2セット目（無限ループ用） */}
+              <div className="flex-none w-48 aspect-3/4 rounded-2xl border border-white/50 bg-gradient-to-b from-white/40 to-white/5 cursor-pointer hover:opacity-80 transition-opacity" />
+              <div className="flex-none w-48 aspect-3/4 rounded-2xl border border-white/50 bg-gradient-to-b from-white/40 to-white/5 cursor-pointer hover:opacity-80 transition-opacity" />
+              <div className="flex-none w-48 aspect-3/4 rounded-2xl border border-white/50 bg-gradient-to-b from-white/40 to-white/5 cursor-pointer hover:opacity-80 transition-opacity" />
+              <div className="flex-none w-48 aspect-3/4 rounded-2xl border border-white/50 bg-gradient-to-b from-white/40 to-white/5 cursor-pointer hover:opacity-80 transition-opacity" />
+              <div className="flex-none w-48 aspect-3/4 rounded-2xl border border-white/50 bg-gradient-to-b from-white/40 to-white/5 cursor-pointer hover:opacity-80 transition-opacity" />
+            </div>
           </div>
 
           {/* FOLLOW US & CONTACT */}
@@ -263,11 +284,6 @@ export default function Home() {
                   <span>CONTACT</span>
                   <span className="text-xs">→</span>
                 </div>
-                <nav className="mt-4 flex gap-6 text-xs tracking-[0.25em] text-[#F7F7F7]/80">
-                  <a href="#about">ABOUT</a>
-                  <a href="#concept">CONCEPT</a>
-                  <a href="#items">ITEMS</a>
-                </nav>
               </div>
             </div>
           </div>
@@ -275,7 +291,7 @@ export default function Home() {
           {/* コピーライト */}
           <div className="mt-10 flex items-center justify-between text-[0.7rem] text-[#F7F7F7]/70">
             <span>©webdesign pro</span>
-        </div>
+          </div>
         </footer>
       </main>
     </div>
