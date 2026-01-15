@@ -1,35 +1,109 @@
+import Image from "next/image";
+import styles from "./index.module.css";
+
 export function Footer() {
-    return (
-        <>
+  return (
+    <>
       {/* ======================= ギャラリー＋フッター ======================= */}
-        <footer className="bg-[#242120] px-10 pb-10 pt-16 text-[#F7F7F7]">
-          {/* ギャラリー（5枚） */}
-          <div className="overflow-hidden">
-            <div className="flex gap-4 animate-scroll">
-              {/* 1セット目 */}
-              <div className="flex-none w-48 aspect-3/4 rounded-2xl border border-white/50 bg-gradient-to-b from-white/40 to-white/5 cursor-pointer hover:opacity-80 transition-opacity" />
-              <div className="flex-none w-48 aspect-3/4 rounded-2xl border border-white/50 bg-gradient-to-b from-white/40 to-white/5 cursor-pointer hover:opacity-80 transition-opacity" />
-              <div className="flex-none w-48 aspect-3/4 rounded-2xl border border-white/50 bg-gradient-to-b from-white/40 to-white/5 cursor-pointer hover:opacity-80 transition-opacity" />
-              <div className="flex-none w-48 aspect-3/4 rounded-2xl border border-white/50 bg-gradient-to-b from-white/40 to-white/5 cursor-pointer hover:opacity-80 transition-opacity" />
-              <div className="flex-none w-48 aspect-3/4 rounded-2xl border border-white/50 bg-gradient-to-b from-white/40 to-white/5 cursor-pointer hover:opacity-80 transition-opacity" />
-              {/* 2セット目（無限ループ用） */}
-              <div className="flex-none w-48 aspect-3/4 rounded-2xl border border-white/50 bg-gradient-to-b from-white/40 to-white/5 cursor-pointer hover:opacity-80 transition-opacity" />
-              <div className="flex-none w-48 aspect-3/4 rounded-2xl border border-white/50 bg-gradient-to-b from-white/40 to-white/5 cursor-pointer hover:opacity-80 transition-opacity" />
-              <div className="flex-none w-48 aspect-3/4 rounded-2xl border border-white/50 bg-gradient-to-b from-white/40 to-white/5 cursor-pointer hover:opacity-80 transition-opacity" />
-              <div className="flex-none w-48 aspect-3/4 rounded-2xl border border-white/50 bg-gradient-to-b from-white/40 to-white/5 cursor-pointer hover:opacity-80 transition-opacity" />
-              <div className="flex-none w-48 aspect-3/4 rounded-2xl border border-white/50 bg-gradient-to-b from-white/40 to-white/5 cursor-pointer hover:opacity-80 transition-opacity" />
+      <footer className="bg-[#F4F4F4]  pb-10 text-[#242120]">
+        {/* ギャラリー（5枚） */}
+        <div className="overflow-hidden">
+          <div className={`flex ${styles.animateScroll}`}>
+            {/* 1セット目 */}
+            <div className="flex-none w-48 aspect-3/4 overflow-hidden cursor-pointer hover:opacity-80 transition-opacity">
+              <Image
+                src="/assets/footer-item1.png"
+                alt=""
+                width={610}
+                height={610}
+              />
+            </div>
+            <div className="flex-none w-48 aspect-3/4 overflow-hidden cursor-pointer hover:opacity-80 transition-opacity">
+              <Image
+                src="/assets/footer-item2.png"
+                alt=""
+                width={610}
+                height={610}
+              />
+            </div>
+            <div className="flex-none w-48 aspect-3/4 overflow-hidden cursor-pointer hover:opacity-80 transition-opacity">
+              <Image
+                src="/assets/footer-item3.png"
+                alt=""
+                width={610}
+                height={610}
+              />
+            </div>
+            <div className="flex-none w-48 aspect-3/4 overflow-hidden cursor-pointer hover:opacity-80 transition-opacity">
+              <Image
+                src="/assets/footer-item4.png"
+                alt=""
+                width={610}
+                height={610}
+              />
+            </div>
+            <div className="flex-none w-48 aspect-3/4 overflow-hidden cursor-pointer hover:opacity-80 transition-opacity">
+              <Image
+                src="/assets/footer-item5.png"
+                alt=""
+                width={610}
+                height={610}
+              />
+            </div>
+            {/* 2セット目（無限ループ用） */}
+            <div className="flex-none w-48 aspect-3/4 overflow-hidden cursor-pointer hover:opacity-80 transition-opacity">
+              <Image
+                src="/assets/footer-item1.png"
+                alt=""
+                width={610}
+                height={610}
+              />
+            </div>
+            <div className="flex-none w-48 aspect-3/4 overflow-hidden cursor-pointer hover:opacity-80 transition-opacity">
+              <Image
+                src="/assets/footer-item2.png"
+                alt=""
+                width={610}
+                height={610}
+              />
+            </div>
+            <div className="flex-none w-48 aspect-3/4 overflow-hidden cursor-pointer hover:opacity-80 transition-opacity">
+              <Image
+                src="/assets/footer-item3.png"
+                alt=""
+                width={610}
+                height={610}
+              />
+            </div>
+            <div className="flex-none w-48 aspect-3/4 overflow-hidden cursor-pointer hover:opacity-80 transition-opacity">
+              <Image
+                src="/assets/footer-item4.png"
+                alt=""
+                width={610}
+                height={610}
+              />
+            </div>
+            <div className="flex-none w-48 aspect-3/4 overflow-hidden cursor-pointer hover:opacity-80 transition-opacity">
+              <Image
+                src="/assets/footer-item5.png"
+                alt=""
+                width={610}
+                height={610}
+              />
             </div>
           </div>
+        </div>
 
+        <div className="px-10">
           {/* FOLLOW US & CONTACT */}
           <div className="mt-16 flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
             {/* nav */}
             <div className="self-start">
-              <p className="text-xs tracking-[0.35em]">Lorem Ipsum</p>
-              <div className="mt-4 flex items-center gap-3">
-<a href="">ABOUT</a>
-<a href="">CONCEPT</a>
-<a href="">ITEMS</a>
+              <p className="text-[40px]">Lorem Ipsum</p>
+              <div className="mt-4 flex items-center gap-[30px]">
+                <a href="">ABOUT</a>
+                <a href="">CONCEPT</a>
+                <a href="">ITEMS</a>
               </div>
             </div>
 
@@ -42,7 +116,7 @@ export function Footer() {
                 amet
               </p>
               <div className="mt-6">
-                <div className="flex items-center justify-between border-b border-[#F7F7F7]/70 pb-2 text-sm">
+                <div className="flex items-center justify-between border-b border-[#242120]/70 pb-2 text-sm">
                   <span>CONTACT</span>
                   <span className="text-xs">→</span>
                 </div>
@@ -51,10 +125,11 @@ export function Footer() {
           </div>
 
           {/* コピーライト */}
-          <div className="mt-10 flex items-center justify-between text-[0.7rem] text-[#F7F7F7]/70">
+          <div className="mt-10 flex justify-end text-[14px] text-[#242120]/70">
             <span>©webdesign pro</span>
           </div>
-        </footer>
-        </>
-    )
+        </div>
+      </footer>
+    </>
+  );
 }
